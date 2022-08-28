@@ -10,17 +10,16 @@ export async function axios_get(
 
 export function GetToThreeTen(): Array<string> {
     let temp = [];
-    let timest = new Date().toLocaleDateString().split("/");
-    let times = timest.reverse();
+    let times = new Date().toLocaleDateString().split("/");
     let timeNum = times.map(e => parseInt(e));
     for (let index = 0; index < 30; index++) {
         temp.push(`${timeNum[0]}\/${timeNum[1]}\/${timeNum[2]}`);
-        if (timeNum[2] >= 1) {
-            timeNum[2] -= 1;
-        }
-        if (timeNum[2] == 0) {
+        if (timeNum[1] >= 1) {
             timeNum[1] -= 1;
-            timeNum[2] = 30;
+        }
+        if (timeNum[1] == 0) {
+            timeNum[0] -= 1;
+            timeNum[1] = 30;
         }
     }
     return temp;
