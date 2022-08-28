@@ -1,3 +1,13 @@
+import axios from "axios";
+
+export async function axios_get(
+    path: string,
+    params: Record<string, any>
+): Promise<string> {
+    const str = await axios.get(path, { params: params }).then(res => res.data);
+    return JSON.stringify(str);
+}
+
 export function GetToThreeTen(): Array<string> {
     let temp = [];
     let times = new Date().toLocaleDateString().split("/");

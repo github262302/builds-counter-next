@@ -1,8 +1,6 @@
-import Head from "next/head";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "../styles/Home.module.css";
-import { Line } from "@ant-design/plots";
+
 // import { getServerSideProps } from "next";
 export interface List {
     controller: string;

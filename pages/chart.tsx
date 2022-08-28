@@ -29,8 +29,7 @@ function App(props) {
     };
     useEffect(() => {
         Get();
-        return () => {};
-    }, []);
+    });
     return (
         <div style={{ padding: "48px" }}>
             <Link href="/">{"home"}</Link>

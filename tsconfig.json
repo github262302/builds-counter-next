@@ -14,11 +14,14 @@
         "isolatedModules": true,
         "jsx": "preserve",
         "moduleResolution": "Node",
-        "paths": { "db/*": ["./sm/db/*"], "model/*": ["./sm/model/*"] },
+        "paths": {
+            "db/*": ["./sm/db/*"],
+            "model/*": ["./sm/model/*"]
+        },
         "baseUrl": ".",
-
+        "types": ["jest"],
         "strictFunctionTypes": true
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/_app.js"],
     "exclude": ["node_modules"]
 }
