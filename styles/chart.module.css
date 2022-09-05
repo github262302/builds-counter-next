@@ -1,0 +1,12 @@
+.content{
+display: grid;
+grid-template-columns: minmax(160px,20%) 1fr;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.single>div:nth-child(2){
+    padding-left: 24px;
+}
