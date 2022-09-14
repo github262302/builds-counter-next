@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { request_url } from "sm/utils/env";
 import styles from "../styles/Home.module.css";
 
 // import { getServerSideProps } from "next";
@@ -89,7 +90,7 @@ function LI(props: Li & { key: number }) {
             <input type="text" onChange={e => setV(e.target.value)} />
             <a
                 target={"_blank"}
-                href={`http://demo.vimjs.com:10006${url}?email=${v}`}
+                href={`${request_url}${url}?email=${v}`}
                 rel="noreferrer">
                 点击发送
             </a>
